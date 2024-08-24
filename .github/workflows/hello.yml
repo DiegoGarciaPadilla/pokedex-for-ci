@@ -12,3 +12,7 @@ jobs:
         steps:
             - name: Echo the message
               run: echo "Hello, World!"
+            - name: Show the current date
+              run: date
+            - name: Show files in the current directory
+              run: ls -l
