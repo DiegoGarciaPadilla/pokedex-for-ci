@@ -21,7 +21,13 @@ jobs:
                 node-version: 18
 
             - name: Install dependencies
-              run: npm install
+              run: npm install --no-audit --no-fund --no-optional
               
             - name: Run ESLint
               run: npm run eslint
+
+            - name: Build the project
+              run: npm run build
+            
+            - name: Test with Jest
+              run: npm run test
